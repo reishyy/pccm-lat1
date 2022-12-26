@@ -9,7 +9,7 @@ jobs:
     
     - name: build and tag image
       run: |
-        docker build -t m1lk/test-action1:v1 -f Dockerfile .
+        docker build -t reishy/github-action1:v1 -f Dockerfile .
     
     - name: push to dockerhub
-      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push m1lk/test-action1:v1
+      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push reishy/github-action1:v1
